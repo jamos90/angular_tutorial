@@ -4,11 +4,12 @@ in the JS file we will create -->
 
 <!-- ng-init is a directive that initializes application data by assigning
 variable values -->
-<html ng-app="app1" np-init="person={fName='James', lName='Amos'}; capitals=[{city:'Montgomery', state:'Alabama'}, {city:'Juneau', state:'Alaska'}, {city:'Pheonix', state:'Arizona'}]">
+<html>
   <head>
     <title>AngularJS Tutorial</title>
   </head>
-  <body>
+  <body ng-app="app1" ng-init="person = {fName: 'Derek', lName: 'Banas'};
+    capitals = [{city: 'Montgomery', state: 'Alabama'}, {city: 'Juneau', state: 'Alaska'}, {city: 'Phoenix', state: 'Arizona'}]">
     <!-- saying that this div is going to be a view  -->
     <div ng-controller='ctrl1'>
 
@@ -20,9 +21,14 @@ variable values -->
       <br></br>
 
       {{calculation}}
-
-
+      <ul>
+        <li ng-repeat="capital in capitals">
+          {{"City:"+ capital.city}};
+        </li>
+      </ul>
     </div>
+
+    <a href="./angulartut2.html"> Second Tutorial Page </a>
 
 
 
