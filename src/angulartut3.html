@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app3">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id='groceries-list' ng-controller="ctrl3">
+      <h3 class="ListTitle">{{groceriers.length}} things to buy</h3>
+
+      <ol>
+        <li ng-repeat='item in groceriers' ng-click='updatePurchased($index)'>
+          <span> {{item.item}} </span>
+          <p> {{item.purchased}}
+
+        </li>
+      </ol>
+
+      <label> Change 1st Item: </label>
+      <input ng-model="groceriers[0].item"/>
+
+
+
+
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <!-- Load the JS Module -->
+    <script src="js/exam3.js"></script>
+  </body>
+</html>
